@@ -23,7 +23,7 @@ def predict():
         return jsonify({'error': 'No file part'}), 400
     
     file = request.files['file']
-    model_type = request.form.get('model_type', 'ifor')
+    model_type = request.form.get('model_type', 'xgb')
     logger.debug(f"Model type selected: {model_type}")
     
     if file.filename == '':
